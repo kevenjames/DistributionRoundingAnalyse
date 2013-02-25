@@ -1,0 +1,27 @@
+﻿<Window x:Class="ParseDataTestUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ParseDataTestUI" Height="768" Width="1024">
+    <Grid>
+        <Button Content="Install PD Service" HorizontalAlignment="Left" Height="34" Margin="10,49,0,0" VerticalAlignment="Top" Width="160" Click="ClickInstallParseDataServiceButton"/>
+        <Button Content="Uninstall PD Service" HorizontalAlignment="Left" Height="34" Margin="175,49,0,0" VerticalAlignment="Top" Width="160" Click="ClickUninstallParseDataServiceButton"/>
+        <Button Content="Start PD Service" HorizontalAlignment="Left" Height="34" Margin="340,49,0,0" VerticalAlignment="Top" Width="160" Click="ClickStartParseDataServiceButton"/>
+        <Button Content="Stop PD Service" HorizontalAlignment="Left" Height="34" Margin="505,49,0,0" VerticalAlignment="Top" Width="160" Click="ClickStopParseDataServiceButton"/>
+        <Button Content="Pause/Resume PD Service" HorizontalAlignment="Left" Height="34" Margin="835,49,0,0" VerticalAlignment="Top" Width="160" Click="ClickPauseResumeParseDataServiceButton"/>
+        <Button Content="Check PD Service Status" HorizontalAlignment="Left" Height="34" Margin="670,49,0,0" VerticalAlignment="Top" Width="160" Click="ClickCheckParseDataServiceStatusButton"/>
+        <Button Content="Install TM Service" HorizontalAlignment="Left" Height="34" Margin="10,10,0,0" VerticalAlignment="Top" Width="160" Click="ClickInstallTaskManagerServiceButton"/>
+        <Button Content="Uninstall TM Service" HorizontalAlignment="Left" Height="34" Margin="175,10,0,0" VerticalAlignment="Top" Width="160" Click="ClickUninstallTaskManagerServiceButton"/>
+        <Button Content="Start TM Service" HorizontalAlignment="Left" Height="34" Margin="340,10,0,0" VerticalAlignment="Top" Width="160" Click="ClickStartTaskManagerServiceButton"/>
+        <Button Content="Stop TM Service" HorizontalAlignment="Left" Height="34" Margin="505,10,0,0" VerticalAlignment="Top" Width="160" Click="ClickStopTaskManagerServiceButton"/>
+        <Button Content="Pause/Resume TM Service" HorizontalAlignment="Left" Height="34" Margin="835,10,0,0" VerticalAlignment="Top" Width="160" Click="ClickPauseResumeTaskManagerServiceButton"/>
+        <Button Content="Check TM Service Status" HorizontalAlignment="Left" Height="34" Margin="670,10,0,0" VerticalAlignment="Top" Width="160" Click="ClickCheckTaskManagerServiceStatusButton"/>
+        <Button Content="Install RA Service" HorizontalAlignment="Left" Height="34" Margin="10,88,0,0" VerticalAlignment="Top" Width="160" Click="ClickInstallRoundingAnalyseServiceButton"/>
+        <Button Content="Uninstall RA Service" HorizontalAlignment="Left" Height="34" Margin="175,88,0,0" VerticalAlignment="Top" Width="160" Click="ClickUninstallRoundingAnalyseServiceButton"/>
+        <Button Content="Start RA Service" HorizontalAlignment="Left" Height="34" Margin="340,88,0,0" VerticalAlignment="Top" Width="160" Click="ClickStartRoundingAnalyseServiceButton"/>
+        <Button Content="Stop RA Service" HorizontalAlignment="Left" Height="34" Margin="505,88,0,0" VerticalAlignment="Top" Width="160" Click="ClickStopRoundingAnalyseServiceButton"/>
+        <Button Content="Pause/Resume RA Service" HorizontalAlignment="Left" Height="34" Margin="835,88,0,0" VerticalAlignment="Top" Width="160" Click="ClickPauseResumeRoundingAnalyseServiceButton"/>
+        <Button Content="Check RA Service Status" HorizontalAlignment="Left" Height="34" Margin="670,88,0,0" VerticalAlignment="Top" Width="160" Click="ClickCheckRoundingAnalyseServiceStatusButton"/>
+        <Button Content="ParseKLineDay" HorizontalAlignment="Left" Height="34" Margin="10,127,0,0" VerticalAlignment="Top" Width="160" Click="ClickParseKLineDayButton"/>
+        <TextBlock Name="MsgReceived" HorizontalAlignment="Left" Height="34" Margin="209,127,0,0" VerticalAlignment="Top" Width="621"/>
+    </Grid>
+</Window>

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="b9a9de36-24d3-4fd2-a339-5700c7c55ca3" name="ParseDayKLineData" linkedPackageId="85250638-6d59-49ed-a2b6-4e08100affb3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="0c928772-f071-4cd6-939b-5cb1dfad3a4d">
+      <profileInstance Id="cd3a86b2-e8c8-4179-8db8-682cb9aa91d5" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="5b4a3dc0-db67-4b68-9dc2-f94d2ee708bb">
+      <profileInstance Id="eb97c1a7-2493-48cf-b3d1-5a4addb17538" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="2e04a598-ea39-455a-8fc6-a3e90b69f9fc" name="Me" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e89069e8-9fbd-4f3d-a92c-6d58a749a70b" />
+        <targetEnds>
+          <association Id="66d74da7-9a0f-4128-a7b3-2c4066bf9ff8" isDerived="false" sourceEndRoleName="Me" targetEndRoleName="ParseDayKLineData" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8e4fa95b-bf85-48d7-9f2d-108fcbd1f660" LastKnownName="ParseDayKLineData" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cdb9794d-07cb-4f82-9ab6-303d1acb82fa" name="Me" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c2a3bbc8-7a54-459a-b8e7-161d74f95770" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3cbdb9ef-06f8-4a29-9b1d-905fcc924c75" name="ParseDayKLineData" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="327bbe3e-8ed5-4f29-87e7-bee4d58feb8f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6a97f774-dc31-4d07-82a8-467e01752de4" />
+          </association>
+          <association Id="7b4f92b9-5ad4-452e-a3f7-35a17efb853d" isDerived="false" sourceEndRoleName="Me" targetEndRoleName="Parse 5M KLine Data" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9cfd8455-e25f-4d2c-b351-10a03b4affdc" LastKnownName="Parse 5M KLine Data" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2b45f7c2-2dad-4b26-8d74-496658d73135" name="Me" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ef94f911-48f5-4bce-b70b-b38be691d766" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="44bf0403-9329-4197-9ca4-84a72666f646" name="Parse 5M KLine Data" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a084cc20-d0c7-4907-b374-991b6d4f439a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="052caeb8-13c4-4e59-b11e-5dc0d1c0fa24" />
+          </association>
+          <association Id="83b7d461-5717-4a39-8798-bf26fee3fbd2" isDerived="false" sourceEndRoleName="Me" targetEndRoleName="Parse Definition Security Data" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8ddd6406-5c6a-423f-a1ae-1aebe4e29ddb" LastKnownName="Parse Definition Security Data" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1afda5e8-b882-4206-9959-3c13bbd0c24f" name="Me" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="45b637bd-a47e-4997-910b-82689b2b587f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e9d41dc2-627d-41b1-b129-885934b09e95" name="Parse Definition Security Data" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a105e91d-580f-4477-a9b3-37c668f22389" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e4f75aba-5845-45ac-8a02-22f1b928f296" />
+          </association>
+          <association Id="89ce14dc-9ff9-4b28-9652-24eb32d53532" isDerived="false" sourceEndRoleName="Me" targetEndRoleName="Doing Rounding Analys" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ea72584d-5fdc-42c5-8ffe-f709102e0ce5" LastKnownName="Doing Rounding Analys" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="507dc95a-2803-43c8-8926-ef4b4ce98d73" name="Me" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="df8915d2-6230-480b-8485-ce3dd7e46952" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="49c9b8c8-d7a2-4c43-a920-c239811e3bfd" name="Doing Rounding Analys" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="eb1f16ae-8aed-47df-959e-8320a8077f10" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f6b11de6-9c61-4e5f-83da-bd2b077630f0" />
+          </association>
+          <association Id="45dc025f-0a0c-411d-b830-9c181fcf5be3" isDerived="false" sourceEndRoleName="Me" targetEndRoleName="Download data after market close" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5d748d22-0191-4a05-8560-2276a87b4877" LastKnownName="Download data after market close" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c9b04ab6-0459-482d-8484-5ed85a62b3bc" name="Me" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d3ce3ff8-4eb0-4819-bb16-ce6ec974c946" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="68352768-45a2-4248-b81d-dc9df519070c" name="Download data after market close" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="01f92177-b968-4b15-bc72-d8c96d2647f0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ca5aa901-a41b-437c-9a0a-da22ef22acbe" />
+          </association>
+          <association Id="71471dae-d19c-49e5-b924-581dc340dcf6" isDerived="false" sourceEndRoleName="Me" targetEndRoleName="Watching market" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f7e42453-ee27-4aa3-9ebe-e194e8ffe50b" LastKnownName="Watching market" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="73901193-8e86-4259-81b9-caf1d33df412" name="Me" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="114f279f-30f6-430a-aaee-26cd7fa21ef6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="258d87e2-ea8e-4ffd-8906-75fcebbf24e9" name="Watching market" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="dfd985c8-1864-402d-b8ef-c94182f15493" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="eacd0f3a-37e9-4360-a659-aa0de333bed7" />
+          </association>
+          <association Id="41fab624-1de8-433c-b2cb-7a9d7dc2ba37" isDerived="false" sourceEndRoleName="Me" targetEndRoleName="Trading suggest and record" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="af24225c-337b-4d4e-bc88-00d2b52db2c3" LastKnownName="Trading suggest and record" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ec5dffeb-603b-4f6d-964a-4966175789b1" name="Me" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="91df7663-4c18-4200-8ce0-d4470e5bf692" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2a15cf8c-f580-4da3-aaa0-0c00673f22df" name="Trading suggest and record" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="542848e8-6cb6-473e-bd6d-64ce45814db3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d28d58c4-faf9-476f-a58a-e115de2b8f0b" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8e4fa95b-bf85-48d7-9f2d-108fcbd1f660" name="ParseDayKLineData" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="39b016f2-56fe-4c33-b7e3-9cac2b311ee7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9cfd8455-e25f-4d2c-b351-10a03b4affdc" name="Parse 5M KLine Data" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8bb43af2-8ea6-4dd5-a9aa-c7eb139ddfaf" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8ddd6406-5c6a-423f-a1ae-1aebe4e29ddb" name="Parse Definition Security Data" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1d147d72-52bb-45eb-8ff0-f54f7547b787" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ea72584d-5fdc-42c5-8ffe-f709102e0ce5" name="Doing Rounding Analys" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0c05a280-6b02-4db8-955e-32dd0d6241fa" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5d748d22-0191-4a05-8560-2276a87b4877" name="Download data after market close" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6a5dd045-cb01-4253-b418-00a396c9de80" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f7e42453-ee27-4aa3-9ebe-e194e8ffe50b" name="Watching market" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ed2b1968-b002-44a9-b272-8ad2b163f293" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="af24225c-337b-4d4e-bc88-00d2b52db2c3" name="Trading suggest and record" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1ea4b522-9ce2-4b35-8525-08c40a69a83a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="85250638-6d59-49ed-a2b6-4e08100affb3" name="DistributionRoudningModel">
+    <elementDefinition Id="94ac438c-bb28-488f-9424-fe77d3b08291" />
+  </package>
+</useCaseModelRoot>
