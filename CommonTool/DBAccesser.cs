@@ -47,7 +47,7 @@ namespace CommonTool
             }
             catch (Exception ex)
             {
-                Log.WriteLog(GShare.LogMark.eError, "Connect DB failed");
+                Log.Log_Error("Connect DB failed");
             }
             finally
             {
@@ -67,7 +67,7 @@ namespace CommonTool
             }
             catch (Exception ex)
             {
-                Log.WriteLog(GShare.LogMark.eError, "Connect DB failed");
+                Log.Log_Error("Connect DB failed");
             }
             finally
             {

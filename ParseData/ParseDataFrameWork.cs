@@ -53,13 +53,13 @@ namespace ParseData
             }
             catch (SystemException e)
             {
-                Log.WriteLog(GShare.LogMark.eError, "Exception:" + e.Message);
+                Log.Log_Fatal(e.Message);
             }
         }
 
         public override void Destroy()
         {
-            Log.WriteLog(GShare.LogMark.eMessage, "ParseData Destroy");
+            Log.Log_Info("ParseData Destroy");
 
             m_udpListener.Stop();
         }

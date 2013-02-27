@@ -124,7 +124,7 @@ namespace ParseData
                 }
                 
                 string strLog = "File " + strFilePath + " parsed.";
-                Log.WriteLog(GShare.LogMark.eMessage, strLog);
+                Log.Log_Debug(strLog);
 
                 br.Close();
                 fs.Close();

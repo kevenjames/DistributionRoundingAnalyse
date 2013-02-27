@@ -41,7 +41,7 @@ namespace CommonTool
 								);
 
             m_strPipeName = strPipeName;
-			Log.WriteLog(GShare.LogMark.eMessage, "The pipe server " + m_strPipeName + " is created." );
+			Log.Log_Debug("The pipe server " + m_strPipeName + " is created." );
 		}
     	public static PipeServer GetInstance(string strPipeName)
 		{
@@ -60,14 +60,14 @@ namespace CommonTool
 		{
             if (m_PipeServer == null)
             {
-                Log.WriteLog(GShare.LogMark.eError, "pipe server " + m_strPipeName + " is null");
+                Log.Log_Error("pipe server " + m_strPipeName + " is null");
                 return;
             }
 
             if (!m_PipeServer.IsConnected)
             {
                 m_PipeServer.WaitForConnection();
-                Log.WriteLog(GShare.LogMark.eMessage, "pipe server " + m_strPipeName + " connected.");
+                Log.Log_Debug("pipe server " + m_strPipeName + " connected.");
             }
 			
 
@@ -77,7 +77,7 @@ namespace CommonTool
 		{
 			m_PipeServer.WaitForPipeDrain();
 			m_PipeServer.Disconnect();
-            Log.WriteLog(GShare.LogMark.eMessage, "pipe server" + m_strPipeName + " disconnected");
+            Log.Log_Debug("pipe server" + m_strPipeName + " disconnected");
 		}
         public bool IsConnected()
         {
@@ -89,7 +89,7 @@ namespace CommonTool
 			{
 				m_PipeServer.Close();
 				m_PipeServer = null;
-                Log.WriteLog(GShare.LogMark.eMessage, "Pipe server " + m_strPipeName + " closed");
+                Log.Log_Info("Pipe server " + m_strPipeName + " closed");
 			}
 		}
         public GShare.ErrorCode WriteToPipe(string msg)
@@ -106,7 +106,7 @@ namespace CommonTool
 
 			m_PipeServer.Write( bResponse, 0, nResponse );
 
-            Log.WriteLog(GShare.LogMark.eMessage, m_strPipeName+ " write " +message);
+            Log.Log_Debug(m_strPipeName+ " write " +message);
 
 			return GShare.ErrorCode.eSuccess;
 		}
@@ -132,7 +132,7 @@ namespace CommonTool
 
 			msg = message;
 
-            Log.WriteLog(GShare.LogMark.eMessage, m_strPipeName + " read " + message);
+            Log.Log_Debug(m_strPipeName + " read " + message);
 
 			return GShare.ErrorCode.eSuccess;
 

@@ -49,8 +49,13 @@ namespace CommonTool
         public enum LogMark
         { 
             eUndefined  = -1,
-            eMessage    = 0,
-            eError      = 1,
+            eAll,
+            eDebug,
+            eInfo,
+            eWarning,
+            eError,
+            eFatal,
+            eNone,
         }
         public enum ErrorCode
 		{
@@ -138,9 +143,8 @@ namespace CommonTool
             }
             catch (Exception ex)
             {
-                Log.WriteLog(LogMark.eError, ex.Message);
+                Log.Log_Error(ex.Message);
             }
-            
 
             return;
         }
@@ -153,7 +157,7 @@ namespace CommonTool
             }
             catch (KeyNotFoundException ex)
             {
-                Log.WriteLog(LogMark.eError, ex.Message);
+                Log.Log_Error(ex.Message);
             }
 
             val = msg;
@@ -168,7 +172,7 @@ namespace CommonTool
             }
             catch (KeyNotFoundException ex)
             {
-                Log.WriteLog(LogMark.eError, ex.Message);
+                Log.Log_Error(ex.Message);
             }
 
             val = Result;

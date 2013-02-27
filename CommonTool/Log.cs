@@ -13,7 +13,7 @@ namespace CommonTool
         private string m_strLogPathName;
 		private static Log m_Instance;
 		private static object _lock = new object();
-        const bool bLog = true;
+        const GShare.LogMark enMark = GShare.LogMark.eAll;
 
 		private Log(string strModual)
 		{
@@ -51,19 +51,49 @@ namespace CommonTool
 			return m_strLogPathName;
 		}
 
-        public static void WriteLog(GShare.LogMark logMark, string msg)
+        public static void Log_Debug(string msg)
         {
-            if (!bLog)
+            WriteLog(GShare.LogMark.eDebug, msg);
+        }
+        public static void Log_Info(string msg)
+        {
+            WriteLog(GShare.LogMark.eInfo, msg);
+        }
+        public static void Log_Warning(string msg)
+        {
+            WriteLog(GShare.LogMark.eWarning, msg);
+        }
+        public static void Log_Error(string msg)
+        {
+            WriteLog(GShare.LogMark.eError, msg);
+        }
+        public static void Log_Fatal(string msg)
+        {
+            WriteLog(GShare.LogMark.eFatal, msg);
+        }
+
+        private static void WriteLog(GShare.LogMark logMark, string msg)
+        {
+            if (enMark > logMark)
                 return;
 
             string mark;
             switch (logMark)
             { 
-                case GShare.LogMark.eMessage:
-                    mark = "Message:" + Environment.NewLine;
+                case GShare.LogMark.eDebug:
+                    mark = "Debug:" + Environment.NewLine;
+                    break;
+                case GShare.LogMark.eInfo:
+                    mark = "Info:" + Environment.NewLine;
+                    break;
+                case GShare.LogMark.eWarning:
+                    mark = "Warning:" + Environment.NewLine;
                     break;
                 case GShare.LogMark.eError:
                     mark = "Error:" + Environment.NewLine;
+                    break;
+                case GShare.LogMark.eFatal:
+                    mark = "Fatal Error:" + Environment.NewLine;
                     break;
                 default:
                     mark = "Not assigned" + Environment.NewLine;

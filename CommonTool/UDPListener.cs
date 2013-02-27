@@ -67,7 +67,7 @@ namespace CommonTool
             }
             catch (Exception e)
             {
-                Log.WriteLog(GShare.LogMark.eError, e.ToString());
+                Log.Log_Error(e.ToString());
             }
             finally
             {

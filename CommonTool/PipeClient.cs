@@ -53,7 +53,7 @@ namespace CommonTool
         {
             if (m_PipeClient == null)
             {
-                Log.WriteLog(GShare.LogMark.eError, "Pipe Client is null");
+                Log.Log_Error("Pipe Client is null");
             }
 
             m_PipeClient.Connect(GShare.cnConnectMillis);
@@ -75,7 +75,7 @@ namespace CommonTool
 
             if (!Connect())
             {
-                Log.WriteLog(GShare.LogMark.eError, "pipe client connect failed");
+                Log.Log_Error("pipe client connect failed");
                 return GShare.ErrorCode.ePipeClientDisconnected;
             }
                 
@@ -95,7 +95,7 @@ namespace CommonTool
 
             m_PipeClient.Close();
 
-            Log.WriteLog(GShare.LogMark.eMessage, m_strPipeName + " read " + message);
+            Log.Log_Debug(m_strPipeName + " read " + message);
 
             return GShare.ErrorCode.eSuccess;
         }
@@ -105,7 +105,7 @@ namespace CommonTool
 
             if (!Connect())
             {
-                Log.WriteLog(GShare.LogMark.eError, "pipe client connect failed");
+                Log.Log_Error("pipe client connect failed");
                 return GShare.ErrorCode.ePipeClientDisconnected;
             }
 
@@ -116,7 +116,7 @@ namespace CommonTool
 
             m_PipeClient.Close();
 
-            Log.WriteLog(GShare.LogMark.eMessage, m_strPipeName + " write " + message);
+            Log.Log_Debug(m_strPipeName + " write " + message);
 
             return GShare.ErrorCode.eSuccess;
         }

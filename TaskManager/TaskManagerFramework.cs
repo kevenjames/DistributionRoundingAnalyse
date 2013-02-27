@@ -58,12 +58,12 @@ namespace TaskManager
             }
             catch (SystemException e)
             {
-                Log.WriteLog(GShare.LogMark.eError, e.Message);
+                Log.Log_Error(e.Message);
             }
 		}
 		public override void Destroy()
 		{
-			Log.WriteLog(GShare.LogMark.eMessage, "TaskManager Destroy");
+			Log.Log_Info("TaskManager Destroy");
 
             //Stop Serivce ParseData
             CommonFunction.SvrOperate(GShare.cstServiceParseData, false);

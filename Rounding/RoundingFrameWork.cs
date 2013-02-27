@@ -42,7 +42,7 @@ namespace Rounding
                     return;
                 }
 
-                Log.WriteLog(GShare.LogMark.eMessage, "Received msg: " + strMsg);
+                Log.Log_Debug(strMsg);
                 WebSvr ws = new WebSvr(GShare.cstIPAddress, GShare.cnPortForTaskManager);
 
                 string strSend = "TaskManger, this is ParseData speaking." + DateTime.Now.ToString("HH:mm:ss");
@@ -53,13 +53,13 @@ namespace Rounding
             }
             catch (SystemException e)
             {
-                Log.WriteLog(GShare.LogMark.eError, "Exception:" + e.Message);
+                Log.Log_Fatal(e.Message);
             }
         }
 
         public override void Destroy()
         {
-            Log.WriteLog(GShare.LogMark.eMessage, "ParseData Destroy");
+            Log.Log_Info("ParseData Destroy");
 
             //Stop UDP Listener
             m_udpListener.Stop();
