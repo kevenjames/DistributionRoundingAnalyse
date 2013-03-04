@@ -36,7 +36,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonFunction.cs" />
-    <Compile Include="DBAccesser.cs" />
+    <Compile Include="SQLDB.cs" />
     <Compile Include="GShare.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="RequestParameter.cs" />
